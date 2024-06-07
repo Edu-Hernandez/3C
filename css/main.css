@@ -1,0 +1,43 @@
+/* Estilos personalizados */
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.carousel-item img {
+    height: 600px;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.2rem;
+    margin-right: 15px;
+}
+
+#theme-toggle {
+    margin-left: 20px;
+}
+
+.btn-outline-light {
+    border-color: #fff;
+    color: #fff;
+}
+
+.btn-outline-light:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.carousel-indicators li {
+    background-color: #000;
+}

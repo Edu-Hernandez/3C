@@ -1,0 +1,26 @@
+/* Estilos personalizados */
+#calendar-container {
+    margin-top: 20px;
+    padding: 0 20px;
+    /* Agrega relleno a los lados */
+    max-width: 600px;
+    /* Define el ancho máximo del calendario */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#noteForm {
+    margin-top: 20px;
+}
+
+/* Modo oscuro */
+.dark-mode {
+    background-color: #222;
+    color: #06f7e3;
+}
+
+/* Cambiar color del día actual */
+.fc-today {
+    background-color: #18656f;
+    /* Amarillo */
+}

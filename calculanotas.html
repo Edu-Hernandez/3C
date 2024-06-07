@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcula tus Notas</title>
+    <!-- CDN de Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Script de Bootstrap y jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="css/calculanotas.css">
+
+</head>
+
+<script>
+    // Redirigir a la página del calendario
+    function redirectToCalendar() {
+        window.location.href = 'calendario.html';
+    }
+</script>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">EduWeb</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="redirectToCalendar()">Calendario</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="calc.html">Calculadora</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Calcular notas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="citasbibliograficas.html">Generar citas bibliograficas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="calccronom.html">Variedad</a>
+                </li>
+                <!-- Agregar más elementos de navegación aquí -->
+                <li class="nav-item">
+                    <a class="nav-link" href="menu.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contacto</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item ml-auto">
+                    <!-- Botón para cambiar el tema -->
+                    <button id="theme-toggle" class="btn btn-light">Cambiar Tema</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 
+        SUGERENCIAS:
+        -No modifiques el código HTML, salvo los textos que se logran ver en pantalla, el id de los inputs o el nombre del evento del botón.
+        -Piensa primero en el algoritmo, antes de empezar a codear
+        -No olvides los ";", las "{}", los "()"" y tener el código ordenado para que sea sencillo volver a leero. Creeme, en algún momento si hay un error empezarás a leer el código y es mejor si está ordenado.
+        -Si pruebas tu código JS y no sucede nada, abre la consola del navegador. Ahí describirá el error lógico. Si no hay ningún error, probablemente el error sea de sintaxis (escritura del código). 
+    -->
+    <div class="container mt-5">
+        <h1 class="text-center">Calculadora de Notas</h1>
+        <form id="notaForm">
+            <div class="form-group">
+                <label for="nota1">Nota 1:</label>
+                <input type="number" class="form-control" id="nota1">
+            </div>
+            <div class="form-group">
+                <label for="nota2">Nota 2:</label>
+                <input type="number" class="form-control" id="nota2">
+            </div>
+            <div class="form-group">
+                <label for="nota3">Nota 3:</label>
+                <input type="number" class="form-control" id="nota3">
+            </div>
+            <button type="button" onclick="calcularPromedio()" class="btn btn-primary">Calcular</button>
+            <button type="button" onclick="limpiardatos()" class="btn btn-danger">Limpiar</button>
+        </form>
+        <div class="mt-4">
+            <h3>Resultado</h3>
+            <p id="resultado"></p> <!--Aqui muestra el promedio y su rango. Ejemplo: Tu nota es A 14 / Nota A: 14-->
+            <p id="aprobado"></p> <!--Aqui muestra si se ha aprobado. Ejemplo: Aprobado / Felicidad, has aprobado-->
+            <p id="rango"></p>
+            <p id="mensaje"></p>
+            <!--Aqui muestra los avisos de validación de datos. Ejemplo: Se deben completar todos los campos / Las notas deben estar entre 0 a 20-->
+        </div>
+    </div>
+    <script src="js/notas.js"></script>
+</body>
+
+
+</html>

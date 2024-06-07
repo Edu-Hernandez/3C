@@ -1,0 +1,22 @@
+
+/* Estilos para el tema claro */
+body.light-mode {
+    background-color: #ffffff;
+    color: #16dfdf;
+}
+
+.calculator-title.light-mode,
+.converter-title.light-mode {
+    color: #dc1414;
+}
+
+/* Estilos para el tema oscuro */
+body.dark-mode {
+    background-color: #121212;
+    color: #09e5bd;
+}
+
+.calculator-title.dark-mode,
+.converter-title.dark-mode {
+    color: #080707;
+}

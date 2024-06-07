@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Citas Bibliográficas</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- CDN de Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/nav.js"></script>
+    
+</head>
+
+
+<script>
+    // Redirigir a la página del calendario
+    function redirectToCalendar() {
+        window.location.href = 'calendario.html';
+    }
+</script>
+
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Eduweb</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="calendario.html" onclick="redirectToCalendar()">Calendario</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="calc.html">Calculadora</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="calculanotas.html">Calcular notas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="citasbibliograficas.html">Generar citas bibliograficas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="calccronom.html">Variedad</a>
+                </li>
+                <!-- Agregar más elementos de navegación aquí -->
+                <li class="nav-item">
+                    <a class="nav-link" href="menu.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contacto</a>
+                </li>
+            </ul>
+            
+        </div>
+    </nav>
+
+
+
+    <div id="app" :class="{ 'dark-mode': theme === 'dark' }">
+        <div class="container py-5">
+            <div id="app" :class="theme">
+                <div class="container mt-5">
+                    <h1 class="text-center">Generador de Citas Bibliográficas</h1>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <citation-generator></citation-generator>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="text-center">
+                <button @click="toggleTheme" class="btn btn-dark-light-mode mt-3">Cambiar Modo</button>
+            </div>
+            <script src="js/app.js"></script>
+        </div>
+
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+.card {
+    width: 100%;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    font-weight: bold;
+}
+
+.card-body input[type="date"],
+.card-body input[type="number"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+}
+
+.card-body button {
+    margin-top: 10px;
+}
+
+.card-body .mt-2 {
+    margin-top: 10px;
+}
+
+.dark-mode {
+    background-color: #212529;
+    color: #fff;
+}
+
+.dark-mode .card {
+    background-color: #343a40;
+    color: #fff;
+}
+
+.dark-mode .btn-dark-light-mode {
+    background-color: #fff;
+    color: #212529;
+}
